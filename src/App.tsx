@@ -10,6 +10,10 @@ function App() {
     setTodos([...todos, input]) 
     setInput("") 
   }
+ 
+  const handleRemoveTodo = (removeIdx: number) => {
+    setTodos(todos.filter((_, idx) => idx !== removeIdx))
+  }
 
   return (
     <div className="app-container">
@@ -23,7 +27,12 @@ function App() {
       <button onClick={handleAddTodo}>Add</button>
       <ul>
         {todos.map((todo, idx) => (
-          <li key={idx}>{todo}</li>
+          <li key={idx}>
+            {todo}
+            <button onClick={() => handleRemoveTodo(idx)} style={{ marginLeft: '8px' }}>
+              Delete
+            </button>
+          </li>
         ))}
       </ul>
     </div>
