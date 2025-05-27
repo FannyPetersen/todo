@@ -34,6 +34,11 @@ function App() {
         value={input}
         onChange={e => setInput(e.target.value)}
         placeholder="Add a new todo"
+        onKeyDown={e => {
+          if (e.key === 'Enter') {
+            handleAddTodo();
+          }
+        }}
       />
       <button onClick={handleAddTodo} aria-label="Add todo">
         {/* Plus SVG icon */}
