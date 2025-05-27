@@ -2,15 +2,26 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [todos, setTodos] = useState<string[]>([])
+  type Todo = {
+    text: string;
+    done: boolean;
+  };
+  
+  const [todos, setTodos] = useState<Todo[]>([])
   const [input, setInput] = useState<string>("")
   
   const handleAddTodo = () => {
     if (input.trim() === "") return
-    setTodos([...todos, input]) 
+    setTodos([...todos, { text: input, done: false }])
     setInput("") 
   }
- 
+
+  const handleToggleTodo = (idx: number) => {
+    setTodos(todos.map((todo, i) =>
+      i === idx ? { ...todo, done: !todo.done } : todo
+    ))
+  }
+
   const handleRemoveTodo = (removeIdx: number) => {
     setTodos(todos.filter((_, idx) => idx !== removeIdx))
   }
@@ -28,7 +39,16 @@ function App() {
       <ul>
         {todos.map((todo, idx) => (
           <li key={idx}>
-            {todo}
+            <span
+              onClick={() => handleToggleTodo(idx)}
+              style={{
+                textDecoration: todo.done ? 'line-through' : 'none',
+                cursor: 'pointer',
+                userSelect: 'none',
+              }}
+            >
+              {todo.text}
+            </span>
             <button onClick={() => handleRemoveTodo(idx)} style={{ marginLeft: '8px' }}>
               Delete
             </button>
