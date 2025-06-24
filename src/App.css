@@ -136,3 +136,31 @@ button[aria-label="Cancel edit"] {
   margin-left: 4px;
   margin-right: 4px;
 }
+
+@media (max-width: 600px) {
+  .app-container {
+    padding: 12px 0;
+  }
+  h1 {
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+  }
+  ul {
+    max-width: 98vw;
+    padding: 0 2vw;
+  }
+  li {
+    padding: 10px 8px;
+    font-size: 1rem;
+  }
+  input[type="text"] {
+    min-width: 0;
+    width: 100%;
+    font-size: 1rem;
+    padding: 8px 6px;
+  }
+  .todo-actions button {
+    font-size: 0.95rem;
+    padding: 6px 6px;
+  }
+}
