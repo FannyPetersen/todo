@@ -1,13 +1,15 @@
 # Simple Todo App (React + Vite)
 
-This project is a simple todo app built with React and Vite. It allows you to add, display, edit and remove todos.
+This project is a simple todo app built with React and Vite. It allows you to add, display, and edit todos, mark todos as completed, remove todos, and clear all completed todos.
 
 ## Features
 
 - Add new todos
 - View a list of todos
 - Edit todos
+- Mark todos as completed
 - Remove todos
+- Clear completed todos
 
 ## Getting Started
 
