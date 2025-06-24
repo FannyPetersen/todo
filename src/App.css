@@ -37,9 +37,12 @@
 .app-container {
   background: #f8e1e7;
   min-height: 100vh;
-  padding: 32px 0;
   width: 100vw;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 ul {
