@@ -106,6 +106,7 @@ button {
   font-size: 1.05rem;
 }
 
+button[aria-label="Edit todo"],
 button[aria-label="Delete todo"] {
   background: #f8e1e7;
   border: none;
@@ -113,7 +114,13 @@ button[aria-label="Delete todo"] {
   border-radius: 4px;
   cursor: pointer;
   transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
 }
+button[aria-label="Edit todo"]:hover,
 button[aria-label="Delete todo"]:hover {
   background: #e6bfcf;
 }
@@ -130,7 +137,6 @@ button[aria-label="Add todo"]:hover {
   background: #e6bfcf;
 }
 
-button[aria-label="Edit todo"],
 button[aria-label="Save edit"],
 button[aria-label="Cancel edit"] {
   margin-left: 4px;
