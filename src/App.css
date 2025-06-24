@@ -139,8 +139,25 @@ button[aria-label="Add todo"]:hover {
 
 button[aria-label="Save edit"],
 button[aria-label="Cancel edit"] {
+  background: #f8e1e7;
+  border: none;
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
   margin-left: 4px;
   margin-right: 4px;
+  font-size: 1.05rem;
+  box-sizing: border-box;
+}
+button[aria-label="Save edit"]:hover,
+button[aria-label="Cancel edit"]:hover {
+  background: #e6bfcf;
 }
 
 @media (max-width: 600px) {
