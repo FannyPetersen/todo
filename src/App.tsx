@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 
 function App() {
@@ -7,10 +7,17 @@ function App() {
     done: boolean;
   };
   
-  const [todos, setTodos] = useState<Todo[]>([])
+  const [todos, setTodos] = useState<Todo[]>(() => {
+    const saved = localStorage.getItem('todos')
+    return saved ? JSON.parse(saved) : []
+  })
   const [input, setInput] = useState<string>("")
   const [editingIdx, setEditingIdx] = useState<number | null>(null)
   const [editingValue, setEditingValue] = useState<string>("")
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos))
+  }, [todos])
 
   const handleAddTodo = () => {
     if (input.trim() === "") return
@@ -56,7 +63,9 @@ function App() {
           placeholder="Add a new todo"
           onKeyDown={e => {
             if (e.key === 'Enter') {
-              handleAddTodo();
+              if (input.trim() === "") return;
+              setTodos([...todos, { text: input, done: false }]);
+              setInput("");
             }
           }}
           style={{ fontSize: '1rem', padding: '8px', borderRadius: '4px', border: '1px solid #ccc', minWidth: '220px' }}
