@@ -47,7 +47,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <h1>What to do</h1>
+      <h1>What to do?</h1>
       <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '24px' }}>
         <input
           type="text"
