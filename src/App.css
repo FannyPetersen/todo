@@ -171,6 +171,7 @@ button[aria-label="Cancel edit"]:hover {
   font-style: italic;
   font-size: 1.1rem;
   width: 100%;
+  pointer-events: none;
 }
 
 @media (max-width: 600px) {
