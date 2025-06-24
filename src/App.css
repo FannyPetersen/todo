@@ -48,6 +48,37 @@
 ul {
   list-style: none;
   padding-left: 0;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+li {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px 0 #e6bfcf44;
+  margin-bottom: 16px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  transition: box-shadow 0.2s, background 0.2s;
+  justify-content: space-between;
+}
+li:hover {
+  box-shadow: 0 4px 16px 0 #e6bfcf77;
+  background: #fbeaf1;
+}
+
+.todo-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+span[onClick] {
+  flex: 1;
+  font-size: 1.1rem;
+  text-align: left;
 }
 
 button[aria-label="Delete todo"] {
@@ -72,4 +103,11 @@ button[aria-label="Add todo"] {
 }
 button[aria-label="Add todo"]:hover {
   background: #e6bfcf;
+}
+
+button[aria-label="Edit todo"],
+button[aria-label="Save edit"],
+button[aria-label="Cancel edit"] {
+  margin-left: 4px;
+  margin-right: 4px;
 }

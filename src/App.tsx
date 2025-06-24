@@ -81,12 +81,14 @@ function App() {
                   autoFocus
                   style={{ marginRight: '8px' }}
                 />
-                <button onClick={handleSaveEdit} aria-label="Save edit" style={{ marginRight: '4px' }}>
-                  Save
-                </button>
-                <button onClick={handleCancelEdit} aria-label="Cancel edit">
-                  Cancel
-                </button>
+                <span className="todo-actions">
+                  <button onClick={handleSaveEdit} aria-label="Save edit" style={{ marginRight: '4px' }}>
+                    Save
+                  </button>
+                  <button onClick={handleCancelEdit} aria-label="Cancel edit">
+                    Cancel
+                  </button>
+                </span>
               </>
             ) : (
               <>
@@ -101,12 +103,14 @@ function App() {
                 >
                   {todo.text}
                 </span>
-                <button onClick={() => handleStartEdit(idx, todo.text)} aria-label="Edit todo" style={{ marginRight: '4px' }}>
-                  ✏️
-                </button>
-                <button onClick={() => handleRemoveTodo(idx)} style={{ marginLeft: '8px' }} aria-label="Delete todo">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg>
-                </button>
+                <span className="todo-actions">
+                  <button onClick={() => handleStartEdit(idx, todo.text)} aria-label="Edit todo" style={{ marginRight: '4px' }}>
+                    ✏️
+                  </button>
+                  <button onClick={() => handleRemoveTodo(idx)} style={{ marginLeft: '8px' }} aria-label="Delete todo">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><line x1="10" y1="11" x2="10" y2="17"/><line x1="14" y1="11" x2="14" y2="17"/></svg>
+                  </button>
+                </span>
               </>
             )}
           </li>
