@@ -59,7 +59,7 @@ export default function Item({
               aria-label="Save edit"
               style={{ marginRight: "4px" }}
             >
-              {/* Done SVG icon */}
+              {/* Done icon */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"
@@ -75,7 +75,7 @@ export default function Item({
               </svg>
             </button>
             <button onClick={cancelEdit} aria-label="Cancel edit">
-              {/* Cancel SVG icon */}
+              {/* Cancel icon */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"
@@ -152,7 +152,7 @@ export default function Item({
               aria-label="Edit todo"
               style={{ marginRight: "4px" }}
             >
-              {/* Pencil SVG icon */}
+              {/* Pencil icon */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"
@@ -173,7 +173,7 @@ export default function Item({
               aria-label="Delete todo"
               style={{ marginLeft: "8px" }}
             >
-              {/* Trashcan SVG icon */}
+              {/* Trashcan icon */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"
