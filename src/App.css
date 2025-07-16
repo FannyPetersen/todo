@@ -161,17 +161,11 @@ button[aria-label="Cancel edit"]:hover {
 }
 
 .empty-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 60px;
+  text-align: center;
   color: #b85c7c;
-  background: none;
-  box-shadow: none;
   font-style: italic;
   font-size: 1.1rem;
-  width: 100%;
-  pointer-events: none;
+  margin-top: 16px;
 }
 
 @media (max-width: 600px) {

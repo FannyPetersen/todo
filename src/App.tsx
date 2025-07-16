@@ -47,7 +47,7 @@ function App() {
       <Input addTodo={handleAddTodo} hasCompleted={hasCompleted} />
       <ul>
         {todos.length === 0 ? (
-          <li className="empty-placeholder">Nothing to do.</li>
+          <div className="empty-placeholder">Nothing to do.</div>
         ) : (
           todos.map((todo, idx) => (
             <Item
